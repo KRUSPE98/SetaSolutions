@@ -1,0 +1,123 @@
+
+#concepts {
+  position: relative;
+  background-color: #FFFFFF; 
+  overflow: hidden;
+}
+
+#concepts::before,
+#concepts::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(54, 81, 207, 0.1); 
+  z-index: 0;
+}
+
+#concepts::before {
+  width: 150px;
+  height: 150px;
+  top: 1%;
+  left: 1%;
+  /* animation: moveCircle 8s ease-in-out infinite; */
+}
+
+#concepts::after {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  right: 2%;
+  /* animation: moveCircle 10s ease-in-out infinite; */
+  animation-delay: 2s;
+}
+
+@keyframes moveCircle {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(100px, 100px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+/* Estilo general para la sección */
+#concepts {
+    padding: 60px 0;
+}
+
+#concepts .divider {
+    width: 50px;
+    margin: 0 auto;
+    border-top: 2px solid #3498db;
+}
+
+.concept-card {
+    margin-bottom: 30px;
+}
+
+.concept-card .concept-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.concept-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.concept-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Iconos dentro del círculo */
+.concept-card .concept-icon i {
+    font-size: 3rem;
+}
+
+/* Estilo base del círculo */
+/* .concept-icon.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    background-color: #fff; 
+    
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+} */
+
+/* Estilo del icono */
+.concept-icon.circle i {
+    color: #3498db; /* Color del icono */
+    transition: transform 0.3s ease, color 0.3s ease; /* Efectos de transición para el cambio */
+    font-size: 2rem; /* Tamaño del icono */
+}
+
+/* Hover efecto */
+.concept-icon.circle:hover {
+    background-color: #087990; /* Cambiar el fondo a azul cuando se pase el cursor */
+    border-color: #fff; /* Cambiar el color del borde cuando se pase el cursor */
+}
+
+.concept-icon.circle:hover i {
+    color: #fff; /* Cambiar el color del icono a blanco */
+    transform: scale(1.2); /* Aumentar el tamaño del icono */
+}
+

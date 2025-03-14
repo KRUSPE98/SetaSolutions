@@ -1,0 +1,372 @@
+/* h1{
+    color:#fff;
+  }
+  .lead{
+    color:#aaa;
+  }
+  
+  .wrapper{margin:10vh}
+  
+  .card{
+    border: none;
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+   overflow:hidden;
+   border-radius:20px;
+   min-height:450px;
+     box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+  
+   @media (max-width: 768px) {
+    min-height:350px;
+  }
+  
+  @media (max-width: 420px) {
+    min-height:300px;
+  }
+  
+   &.card-has-bg{
+   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size:120%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);}
+  
+    &:hover {
+      transform: scale(0.98);
+       box-shadow: 0 0 5px -2px rgba(0,0,0,0.3);
+      background-size:130%;
+       transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  
+      .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(255,186,33);
+       background: linear-gradient(0deg, rgba(255,186,33,0.5) 0%, rgba(255,186,33,1) 100%);
+       }
+    }
+  }
+   .card-footer{
+    background: none;
+     border-top: none;
+      .media{
+       img{
+         border:solid 3px rgba(255,255,255,0.3);
+       }
+     }
+   }
+    .card-title{font-weight:800}
+   .card-meta{color:rgba(0,0,0,0.3);
+    text-transform:uppercase;
+     font-weight:500;
+     letter-spacing:2px;}
+   .card-body{ 
+     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+   
+  
+    }
+   &:hover {
+     .card-body{
+       margin-top:30px;
+       transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+     }
+   cursor: pointer;
+   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+   .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+   background: rgb(255,186,33);
+  background: linear-gradient(0deg, rgba(255,186,33,0.3785889355742297) 0%, rgba(255,186,33,1) 100%);
+  }
+  } */
+
+
+
+  /* .section_our_solution .row {
+    align-items: center;
+  }
+   */
+  /* .our_solution_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } */
+  /* .our_solution_category .solution_cards_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+
+  /* #about {
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"%3E%3Cpolygon points="0,0 50,50 0,100" fill="%2346a1c4" /%3E%3Cpolygon points="50,50 100,0 100,100" fill="%234ab3c7" /%3E%3C/svg%3E');
+    background-size: cover;
+    background-position: center;
+  } */
+
+  /* #about {
+    background: linear-gradient(45deg, #42c3ca 25%, #309df0 25%, #309df0 50%, #42c3ca 50%, #42c3ca 75%, #309df0 75%, #309df0 100%);
+    background-size: 50px 50px;
+} */
+/* 
+#about {
+  position: relative;
+  background-color: #f4f4f4; 
+  overflow: hidden;
+}
+
+#about::before,
+#about::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(54, 81, 207, 0.1); 
+  z-index: 0;
+}
+
+#about::before {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation: moveCircle 8s ease-in-out infinite;
+}
+
+#about::after {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  right: 20%;
+  animation: moveCircle 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes moveCircle {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(100px, 100px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+} */
+
+#services {
+  position: relative;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+#services::before,
+#services::after {
+  content: '';
+  position: absolute;
+  background: rgba(54, 81, 207, 0.15);
+  z-index: 0;
+}
+
+#services::before {
+  width: 400px;
+  height: 100px;
+  top: 20%;
+  left: -100px;
+  transform: rotate(30deg);
+  /* animation: moveRectangle 8s ease-in-out infinite; */
+}
+
+#services::after {
+  width: 350px;
+  height: 150px;
+  top: 60%;
+  right: -120px;
+  transform: rotate(-45deg);
+  /* animation: moveRectangle 10s ease-in-out infinite; */
+  animation-delay: 2s;
+}
+
+@keyframes moveRectangle {
+  0% {
+      transform: translate(0, 0) rotate(30deg);
+  }
+  50% {
+      transform: translate(150px, -100px) rotate(30deg);
+  }
+  100% {
+      transform: translate(0, 0) rotate(30deg);
+  }
+}
+
+
+
+  /* Ajuste base para las tarjetas dentro del contenedor */
+.solution_cards_box .solution_card {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+              0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 350px; /* Altura mínima constante */
+  transition: 0.7s;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos dentro de la tarjeta se alineen verticalmente */
+}
+
+/* Estilo al hacer hover sobre la tarjeta */
+.solution_cards_box .solution_card:hover {
+  background: #309df0;
+  color: #fff;
+  transform: scale(1.05); /* Ajuste más sutil en la escala */
+  z-index: 9;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.solution_cards_box .solution_card:hover::before {
+  background: rgb(85 108 214 / 10%);
+}
+
+/* Cambiar el color del título y descripción al hacer hover */
+.solution_cards_box .solution_card:hover .solu_title h3,
+.solution_cards_box .solution_card:hover .solu_description p {
+  color: #fff;
+}
+
+
+/* Decoración adicional en las tarjetas (antes del hover) */
+.solution_cards_box .solution_card:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
+}
+
+/* Estilo del botón al hacer hover */
+.solution_cards_box .solution_card:hover .solu_description button {
+  background: #fff !important;
+  color: #309df0;
+}
+
+/* Estilos del título de la tarjeta */
+.solution_card .solu_title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center; /* Centra el título */
+}
+
+/* Estilo de la descripción dentro de la tarjeta */
+.solution_card .solu_description p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align: justify; /* Justifica el texto */
+  color: #7f8c8d;
+}
+
+/* Botón de 'Leer más' */
+.solution_card .solu_description button {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(140deg, #42c3ca 0%, #42c3ca 50%, #087990 75%) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Color de la burbuja de hover */
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+}
+
+/* Efecto hover sobre la burbuja de color */
+.solution_cards_box .solution_card:hover .hover_color_bubble {
+  top: 0rem;
+}
+
+/* Estilos del icono superior en cada tarjeta */
+.solution_cards_box .solution_card .so_top_icon {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Añadir separación entre icono y título */
+}
+
+/* Ajuste en el tamaño del icono */
+.solution_cards_box .solution_card .so_top_icon img {
+  width: 40px; /* Ajuste del tamaño del icono */
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Justificar el texto en la descripción de los cards */
+.solution_card .solu_description p {
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #7f8c8d;
+}
+
+/* Centrar el botón de 'Leer más' */
+.solution_card .solu_description button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (min-width: 320px) {
+  .solution_cards_box .solution_card {
+      flex: 1 1 100%; /* Permite que las tarjetas ocupen el 100% de la fila en pantallas pequeñas */
+  }
+}
+
+/* Media Query para pantallas medianas */
+@media only screen and (min-width: 768px) {
+  .solution_cards_box .solution_card {
+      flex: 0 50%; /* Para pantallas medianas, 2 tarjetas por fila */
+  }
+}
+
+/* Media Query para pantallas grandes */
+@media only screen and (min-width: 1024px) {
+  .solution_cards_box .solution_card {
+      flex: 0 33%; /* Para pantallas grandes, 3 tarjetas por fila */
+  }
+}
+
+
+
+  
