@@ -10857,6 +10857,14 @@ body {
   border: none;
   border-radius: 10rem;
 }
+.btn-ms {
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
 
 hr.divider {
   height: 0.2rem;
@@ -11090,3 +11098,4 @@ header.masthead h1, header.masthead .h1 {
 .scrollup i:hover{
     color: white;
 }
+
