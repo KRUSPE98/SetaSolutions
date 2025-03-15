@@ -93,3 +93,43 @@ $('.scrollup').click(function(){
 
 
 
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("emailInput").value;
+
+    if (!validateEmail(email)) {
+        alert("Por favor, ingrese un correo válido.");
+        return;
+    }
+
+    let formData = new FormData();
+    formData.append("email", email);
+
+    fetch("models/send_email.php", {  // Asegúrate de que esta ruta sea accesible desde el navegador
+        method: "POST",
+        body: formData,
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById("successMessage").classList.remove("d-none");
+            document.getElementById("emailInput").value = ""; // Limpia el campo
+        } else {
+            alert(data.error);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
+
+// Función para validar un email
+function validateEmail(email) {
+    let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+
+

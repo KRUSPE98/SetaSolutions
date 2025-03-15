@@ -462,13 +462,16 @@
                 <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start mt-4 mt-md-0">
                     <h5 class="fw-bold">Calidad</h5>
                     <p>Ingrese su correo electrónico</p>
-                    <form class="w-100" style="max-width: 300px;">
+                    <form class="w-100" style="max-width: 300px;" id="emailForm">
                         <div class="mb-2">
-                            <input type="email" class="form-control text-center text-md-start" placeholder="Correo electrónico aquí por favor">
+                            <input type="email" id="emailInput" class="form-control" placeholder="Correo electrónico aquí por favor" required>
                         </div>
-                        <button class="btn btn-primary w-100 btn-ms">Enviar consulta ahora mismo</button>
+                        <button type="submit" class="btn btn-primary w-100 btn-ms">Enviar consulta ahora mismo</button>
+                        
                     </form>
+                    <p id="successMessage" class="mt-2 text-success d-none">Correo enviado correctamente.</p>
                 </div>
+
             </div>
     
             <!-- Copyright -->
