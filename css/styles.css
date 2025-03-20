@@ -11009,6 +11009,10 @@ header.masthead h1, header.masthead .h1 {
 }
 
 
+.text-justify{
+  text-align: justify !important;
+}
+
   /*************************/
 /*     02. Preloader     */
 /*************************/

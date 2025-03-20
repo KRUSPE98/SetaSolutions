@@ -228,7 +228,7 @@
 
 /* Estilo al hacer hover sobre la tarjeta */
 .solution_cards_box .solution_card:hover {
-  background: #309df0;
+  background: #087990;
   color: #fff;
   transform: scale(1.05); /* Ajuste más sutil en la escala */
   z-index: 9;
@@ -286,7 +286,8 @@
 .solution_card .solu_description button {
   border: 0;
   border-radius: 15px;
-  background: linear-gradient(140deg, #42c3ca 0%, #42c3ca 50%, #087990 75%) !important;
+  /* background: linear-gradient(140deg, #42c3ca 0%, #42c3ca 50%, #087990 75%) !important; */
+  background: #f4623a;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
