@@ -3734,7 +3734,7 @@ textarea.form-control-lg {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  /* --bs-navbar-padding-y: 0.5rem; */
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
@@ -3773,8 +3773,8 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: var(--bs-navbar-brand-padding-y);
-  padding-bottom: var(--bs-navbar-brand-padding-y);
+  /* padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y); */
   margin-right: var(--bs-navbar-brand-margin-end);
   font-size: var(--bs-navbar-brand-font-size);
   color: var(--bs-navbar-brand-color);
@@ -11101,5 +11101,25 @@ header.masthead h1, header.masthead .h1 {
 
 .scrollup i:hover{
     color: white;
+}
+
+/* .is-invalid {
+  border: 2px solid red;
+} */
+
+.is-valid {
+  border-color: #28a745; /* Green border */
+}
+
+.is-invalid {
+  border-color: #dc3545; /* Red border */
+}
+
+.invalid-feedback {
+  color: #dc3545; /* Red color for error message */
+}
+
+.is-valid ~ .invalid-feedback {
+  display: none; /* Hide error message when input is valid */
 }
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>SETA Solutions</title>
+    <title>DIL</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
@@ -25,7 +25,7 @@
     <!-- Slick Theme CSS (opcional) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-    <link href="css/styles.css?v=1.0" rel="stylesheet" />
+    <link href="css/styles.css?v=1.0.0" rel="stylesheet" />
     <link href="css/us.css?v=3.0" rel="stylesheet" />
     <link href="css/concepts.css?v=2.0" rel="stylesheet" />
     <link href="css/tecnologies.css?v=2.0" rel="stylesheet" />
@@ -47,9 +47,11 @@
     <!-- end of preloader -->
 
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">SETA Solutions</a>
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/global/logo-with-name-bg.png" alt="" width="80px" >
+            </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -87,7 +89,7 @@
             <div class="col-md-5 text-center text-md-start">
                 <h2 class="fw-bold">Soluciones web innovadoras y efectivas</h2>
                 <p class="text-muted text-justify">
-                    En Seta Solutions, nos dedicamos al desarrollo web utilizando herramientas y metodologías actuales, garantizando un proceso ágil y sin complicaciones para nuestros clientes.
+                    En Dev Innovate Lab, nos dedicamos al desarrollo web utilizando herramientas y metodologías actuales, garantizando un proceso ágil y sin complicaciones para nuestros clientes.
                     <br>
                     Evitamos procesos engorrosos y eliminamos la complejidad innecesaria en el desarrollo de sistemas. Nos ajustamos a las tendencias del mercado, ofreciendo un desarrollo profesional a la medida de cada cliente, con flexibilidad y eficiencia en cada proyecto.
                 </p>
@@ -356,81 +358,73 @@
                 <div class="col-lg-8 col-xl-6 text-center">
                     <h2 class="mt-0">Contactanos!</h2>
                     <hr class="divider" />
-                    <p class="text-muted mb-5">En Seta Solutions, estamos listos para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible!</p>
+                    <p class="text-muted mb-5">En Dev Innovate Lab, estamos listos para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible!</p>
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-6">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
+                    
+                    <!-- Success Message -->
+                    <div id="submitSuccessMessage" class="alert alert-success alert-dismissible fade d-none" role="alert">
+                        <strong>¡Gracias!</strong> Su mensaje fue enviado exitosamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    
+                    <!-- Error Message -->
+                    <div id="submitErrorMessage" class="alert alert-danger alert-dismissible fade d-none" role="alert">
+                        <strong>Oops!</strong> Hubo un error al enviar el mensaje. Intente de nuevo más tarde.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    
+
+                    <form id="contactForm" >
+                        <!-- Name input -->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                data-sb-validations="required" />
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."  />
                             <label for="name">Nombre:</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido.</div>
+                            <div class="invalid-feedback" id="name-error">El nombre es requerido.</div>
                         </div>
-                        <!-- Email address input-->
+                    
+                        <!-- Email input -->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Email</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">El email es requerido.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">El email ingresado no es valido.</div>
+                            <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"  />
+                            <label for="email">Email:</label>
+                            <div class="invalid-feedback" id="email-error">Por favor ingrese un email válido.</div>
                         </div>
-                        <!-- Phone number input-->
+                    
+                        <!-- Phone input -->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
+                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890"  />
                             <label for="phone">Número Telefónico</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">Es número telefónico es requerido.
-                            </div>
+                            <div class="invalid-feedback" id="phone-error">El número telefónico es requerido.</div>
                         </div>
-                        <!-- Message input-->
+                    
+                        <!-- Message input -->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"
-                                data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" ></textarea>
                             <label for="message">Mensaje</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">El mensaje es requerido.
-                            </div>
+                            <div class="invalid-feedback" id="message-error">El mensaje es requerido.</div>
                         </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
+                    
+                        <!-- Submit button -->
+                        <!-- <div class="d-grid">
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                        </div> -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-xl w-100" id="submitButton" type="submit">
+                                <span class="spinner-border spinner-border-sm me-2 d-none" id="buttonSpinner" role="status" aria-hidden="true"></span>
+                                <span id="buttonText">Enviar</span>
+                            </button>
                         </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
-                                type="submit">Enviar</button></div>
+                        
                     </form>
+                    
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0">
                     <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                    <div>+1 (555) 123-4567</div>
+                    <div>+52 (244) 110-9059</div>
                 </div>
             </div>
         </div>
@@ -457,7 +451,7 @@
                 <!-- Eficiencia -->
                 <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start mt-4 mt-md-0">
                     <h5 class="fw-bold">Eficiencia</h5>
-                    <p>+34-912-345-678<br>contacto@setasolutions.com</p>
+                    <p>+52 2441109059<br>contacto@devinnovatelab.com</p>
                 </div>
     
                 <!-- Calidad -->
@@ -495,7 +489,7 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
 
     <!-- jQuery (necesario para Slick) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -503,7 +497,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?v=1"></script>
 
     <script src="js/slider.js"></script> <!-- Aquí pones la ruta correcta -->
 </body>
