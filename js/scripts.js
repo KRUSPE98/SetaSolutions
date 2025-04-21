@@ -198,7 +198,7 @@ window.addEventListener('DOMContentLoaded', event => {
             toggleButtonLoading(true); // Show spinner
     
             // Send data to PHP script
-            fetch('models/send_contact_form.php', {
+            fetch('controllers/send_contact_form.php', {
                 method: 'POST',
                 body: new FormData(form)
             })
@@ -278,7 +278,7 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
     let formData = new FormData();
     formData.append("email", email);
 
-    fetch("models/send_email.php", {  // Asegúrate de que esta ruta sea accesible desde el navegador
+    fetch("controllers/send_email.php", {  // Asegúrate de que esta ruta sea accesible desde el navegador
         method: "POST",
         body: formData,
         headers: {
