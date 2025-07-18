@@ -1,5 +1,17 @@
 
 <?php
+
+/**
+ * Copyright (c) 2025 Dev Innovate Lab
+ * 
+ * Este archivo forma parte del sistema de contacto web de Dev Innovate Lab.
+ * Todos los derechos reservados.
+ * 
+ * Queda prohibida la reproducción total o parcial sin la autorización explícita de los autores.
+ * 
+ * Desarrollado por Dev Innovate Lab - https://devinnovatelab.com
+ */
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -35,6 +47,7 @@ try {
     $mail->Password   = 'ygtzrmotaqdmfcru';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
+    $currentYear = date('Y');
 
     $mail->setFrom('companyit2504@gmail.com', 'Formulario Web');
     $mail->addAddress('silva.fausto.08@gmail.com');
@@ -54,7 +67,7 @@ try {
                     <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 30px;">
                         
                         <div style="text-align: center; margin-bottom: 20px;">
-                        <img src="http://82.25.85.85:8081/assets/img/global/logo-with-name-bg.png" alt="Dev Innovate Lab" style="max-width: 200px;">
+                        <img src="https://devinnovatelab.com/assets/img/global/logo-with-name-bg.png" alt="Dev Innovate Lab" style="max-width: 200px;">
                         </div>
 
                         <h2 style="color: #f4623a;">Nuevo mensaje recibido</h2>
@@ -74,6 +87,12 @@ try {
                         </p>
 
                     </div>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+
+                    <p style="font-size: 12px; color: #888; text-align: center;">
+                        &copy; $currentYear Dev Innovate Lab. Todos los derechos reservados.
+                    </p>
 
                     </body>
                     </html>
@@ -135,6 +154,12 @@ try {
                     </p>
                     </div>
                 </div>
+
+                <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+
+                <p style="font-size: 12px; color: #888; text-align: center;">
+                    &copy; $currentYear Dev Innovate Lab. Todos los derechos reservados.
+                </p>
 
                 </body>
                 </html>
