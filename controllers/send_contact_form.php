@@ -109,7 +109,7 @@ try {
                 <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 30px;">
                     
                     <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="http://82.25.85.85:8081/assets/img/global/logo-with-name-bg.png" alt="Dev Innovate Lab" style="max-width: 200px;">
+                    <img src="https://devinnovatelab.com/assets/img/global/logo-with-name-bg.png" alt="Dev Innovate Lab" style="max-width: 200px;">
                     </div>
 
                     <h2 style="color: #087990;">Hola $name,</h2>
@@ -126,7 +126,7 @@ try {
                     <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
 
                     <p style="font-size: 14px; color: #555;">
-                    Si necesitas contactarnos con urgencia, podés responder directamente a este correo o visitar nuestro sitio web.
+                    Si necesitas contactarnos con urgencia, puedes responder directamente a este correo o visitar nuestro sitio web.
                     </p>
 
                     <div style="margin-top: 30px; text-align: center;">
